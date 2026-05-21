@@ -13,3 +13,9 @@ def health() -> dict:
 def divide(a: int, b: int) -> dict:
     # 故意 bug:沒驗證 b != 0
     return {"result": a / b}
+
+
+@app.get("/multiply")
+def multiply(a: int, b: int) -> dict:
+    """Multiply a by b."""
+    return {"result": a * b}
