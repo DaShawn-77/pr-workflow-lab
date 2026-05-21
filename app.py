@@ -19,3 +19,11 @@ def divide(a: int, b: int) -> dict:
 def multiply(a: int, b: int) -> dict:
     """Multiply a by b."""
     return {"result": a * b}
+
+
+@app.get("/power")
+def power(base: int, exp: int) -> dict:
+    result = 1
+    for _ in range(exp):
+        result *= base
+    return {"result": result}
