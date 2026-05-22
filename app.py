@@ -19,3 +19,9 @@ def divide(a: int, b: int) -> dict:
 def multiply(a: int, b: int) -> dict:
     """Multiply a by b."""
     return {"result": a * b}
+
+
+@app.get("/sqrt")
+def sqrt(n: int) -> dict:
+    # bug on purpose: no check for negative n
+    return {"result": n ** 0.5}
